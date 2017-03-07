@@ -1,0 +1,81 @@
+Linux Introduction:
+
+
+Linux Command:
+df -h - desktop/disk usage
+df -k - desktop usage show in block 
+ctrl+d - delete
+ctrl+l - clear screen
+ctrl+c - exit
+su - switch user
+whoami - will tell user name
+id - will tell user id and password
+sudo - will go to root user for installation
+cd -change current directory
+cd.. - back to previous directory
+pwd - Print name of present working directory
+touch - create an empty file
+mkdir - make directory
+cat - view content of the file
+echo - print value
+ls - Show lists of files or information on the files
+ls -lrt - show reverse information of all files in date order  
+ls -lart - show all files including hidden in reverse in date order
+ls -a - show all files including hidden
+ls dir - show content of directory
+man - show manual of requested commands
+$ info <commandname> - show information of command
+mv - move files or rename files 
+$ mv <file1> <file2> - rename file1 to file2
+rm - Delete (remove) files
+rm -rf - delete directory or file without asking for anything
+$ <commandname> --help - can check commands details
+editors in linux:
+Vi vim, nano, gedit (Gnome - graphical editor)
+ but I have worked on vim only:
+$ sudo yum install vim - install vim package
+:wq - save and quit the current file
+tar -cvf new.tar a.txt b.txt c.txt - It will compress a, b, c file and will store in new.tar file.
+tar -tvf new.tar - view content of new.tar file.
+tar -xvf new.tar - extract file
+source - use to reload file
+du -sh * - show all file size
+du -sh filename/directoryname - show particular file size.
+chmod - change file permission full permission is 777
+top - checking memory usage
+  
+Alias - short name for a long command
+in vi editor we will give short name for a command.
+alias l = 'ls -lrt' here we don't need to write ls -lrt again and again we can simply write l and it will act same as ls -lrt.
+source - use to reload file without exit
+.bash_profile - user centric file for every user this file exist
+head - use to print first 10 lines
+tail .bash_history - use to print last 10 lines of records by default
+ps - check running process   
+find . -type f/d -name "file name/directory name"
+find . -type f -name "?.log"- it will find 1 character file name or directory name
+find . -type f -name "*.log" - it will find any length of file name or directory name
+find . -type f -size -1M -name "*.log" - it means file size should be less than 1 Mb.
+find . -type f -mtime -name "*.txt" - show output of file whihc file is modified within 1 day.
+find . -type f -mtime -3 -name "*.txt" -exec du -sh{}\ 
+grep command  
+grep "literal_string" file name - search for given string in a file
+grep "string" .filepattern - check string in multiple files
+grep -i "string" file - case insensitive search
+grep "regex" filename - match regular expression in file
+grep -w - checking for full words not for substring
+grep -A <n> "string" filename - print specified n lines after the match 
+grep -B <n> "string" filename - print specified n lines before the match 
+grep -C <n> "string" filename - print specified n lines around match in both side before & after of match
+grep -r - search all files recursively
+$export grep -options = '--color=auto' grep_color='100;8' - highlighting the search if we want to highlight which part matches the line
+grep -v - display lines which doesn't matches the given string
+grep -c "pattern" filename - counting number of matches 
+grep -c this demo_file3 - how many lines matches  the pattern
+grep -v -c this demo_file4 - how many lines that doesn't matches the pattern
+grep -o - show only matched string  
+crontab - used for scheduling jobs
+crontab -e - to edit the crontab(it will open the crontab in text editor)
+crontab -v - to view your crontab
+crontab -r - to remove your crontab
+crontab -l - list your crontab
